@@ -1,18 +1,86 @@
-let color1 = document.querySelector('.color1');
-let color2 = document.querySelector('.color2');
-let css= document.querySelector('h3');
-let body = document.getElementById('Gradient');
+body{
+	font-family: 'Raleway',sans-serif;
+	text-align: center;
+	background: linear-gradient(to right, rgb(108,182,228),green);
+	text-decoration: none;
+	top: 15%;
+}
 
+h1{
+	font-family:'Raleway',sans-serif;
+	color: rgba(0,0,0,0.7);
+	text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+    font-size: 60px;
+}
 
-function setGradient() {
-	body.style.background = 
-	"linear-gradient(to right, " + color1.value + ","+ color2.value + ")";
+h2{
+	font-family:'Raleway',sans-serif;
+	color: rgba(0,0,0,0.7);
+	text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+    font-size: 1.5em;
+}
 
-	css.textContent = body.style.background + ";"; 
- }
+h3{
+	font-family:'Raleway',sans-serif;
+	color: rgba(0,0,0,0.7);
+}
 
-color1.addEventListener("input", setGradient);
+.color1{
+	width: 4em;
+	height: 2em;
+	padding: 0px;
+	margin: 10px;
+}
 
-color2.addEventListener("input", setGradient);
+.color2{
+	width: 4em;
+	height: 2em;
+	padding: 0px;
+	margin: 10px;
+}
+
+button{
+  border-radius: 4px;
+  font-family: 'Pacifico', cursive;
+  border: none;
+  color:rgba(0,0,0,0.7) ;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px;
+  width: 160px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  background: linear-gradient(to right, rgba(255,0,0,0.9),Rgba(255,162,0,0.9));
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 
